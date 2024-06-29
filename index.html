@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head> 
+        <meta name="viewport" content="width=device-width,initial-scale=3.0">
+        <title>password strength checker</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+          
+        <div class="container"> 
+               <center><h1  style="color:aliceblue";>HOW STRONG IS THIS PASSWORD ?</h1></center>
+                <p style="color:rgb(255, 251, 2);" >This tool is for educational purposes only. Recommendations made by this tool to improve password strength are generally safe but not infallible.
+                    Any password submitted here is not stored or transmitted</p><hr>
+                        <button1 type="submit"></button1>
+                            <div class="container1"><img src="Shield.webp" width="300" height="400">  
+                        <div class="input-box">
+                    <input type="password" id="password"placeholder="Enter the password to analyze">
+                <button type="input" onclick="alert('Password set')"><img src="arrow.jpeg"></button>
+                <p id="message">Password Is <span id="strenght"></span></p>
+                
+            </div>
+        </div>
+        </div>
+        
+        <script>
+            var pass = document.getElementById("password");
+            var msg = document.getElementById("message");
+            var str = document.getElementById("strenght");
+
+            pass.addEventListener('input', () => {
+                if(pass.value.length > 0){
+                    msg.style.display = "block";
+                }
+                else{
+                    msg.style.display = "none";
+
+                }
+                if(pass.value.length < 4)
+                {
+                    str.innerHTML = "weak";
+                    pass.style.bordercolor = "#red";
+                    msg.style.color = "red";
+
+                }
+                else if(pass.value.length >= 4 && pass.value.length < 8)
+                {
+                    str.innerHTML = "medium";
+                    pass.style.bordercolor = "orange";
+                    msg.style.color = "orange";
+
+
+                }
+                else if(pass.value.length >= 8)
+                {
+                    str.innerHTML = "strong";
+                    pass.style.bordercolor = "#26d730";
+                    msg.style.color = "#26d730";
+                }
+
+                }
+
+                
+            )
+        </script>
+    </body>
+</html>
