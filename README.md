@@ -34,3 +34,7 @@ The objective of a password strength checker is to evaluate the security level o
 **css:** cascading style sheet used to style the password strength checker website.
 
 **javascript:** used to add java in html.
+
+
+![Screenshot 2024-07-15 205313](https://github.com/user-attachments/assets/a6d426f5-aade-48e2-8774-8e19084dc1fb)
+
